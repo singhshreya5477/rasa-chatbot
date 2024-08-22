@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("https://sxcpatna.edu.in/wp-content/uploads/2022/10/COLLEGE-BUILDING-1024x454.png"); /* Replace 'background-image.jpg' with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Ensure full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  background-color: yellow;
+  padding: 10px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.phone,
+.email {
+  display: flex;
+  align-items: center;
+}
+
+.phone img,
+.email img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.content {
+  padding: 20px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Semi-transparent white background */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center;
+}
+
+.college-info {
+  display: flex;
+  align-items: center;
+}
+
+.college-info img {
+  width: 100px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px;
+}
+
+.text-info {
+  color: black;
+}
+
+.text1 {
+  font-size: 24px; /* Adjust font size as needed */
+  color: lightblue;
+}
+
+.text2 {
+  margin-top: 10px; /* Add spacing between text1 and text2 */
+}
+
+.text3 {
+  color: lightcoral; /* Light red color */
+  margin-top: 10px; /* Add spacing between text2 and text3 */
+}
+
+.login-form {
+  margin-top: 20px; /* Add space between college info and login form */
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form input {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form button {
+  width: 300px;
+  padding: 10px;
+  background-color: lightblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #007bff;
+}

@@ -1,0 +1,88 @@
+version: "3.1"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - courses
+  - ask_apply_online
+  - ask_placements
+  - repeat_course_interested
+  - ask_me_anything
+  - give_course_interested
+  - bot_challenge
+  - my_name_is
+
+actions:
+  - action_say_course_interested
+  - utter_ask_course_interested
+  - utter_ask_apply_online
+  - utter_ask_placements
+  - utter_did_that_help
+  - utter_remember
+  - utter_greet
+  - utter_cheer_up
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_courses
+  - utter_my_name_is
+
+entities:
+  - course_interested
+
+slots:
+  course_interested:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: course_interested
+
+responses:
+
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_course_interested:
+  - text: "which course you are interested in? "
+
+  utter_remember:
+   - text: "Thanks. I'll remember that."
+
+  utter_courses:
+  - text: "St.Xavier's college of Management and Technology offers professional programs such as BCA,BBA,BMC,BBA IB,Bcom and many more with the lowest course fee as compared to other universities in the region"
+
+  utter_my_name_is:
+  - text: "Nice to meet you {person}" 
+
+  utter_ask_apply_online:
+  - text: "St.Xavier's college of Management & Technology provides offline as well as online admission procedure. Online admission procedure focuses on XET examination. Apply Now on 'https://sxcpatna.edu.in/' "
+
+  utter_ask_placements:
+  - text: "Highest Package in 2021-22 BCA - ₹5LPA, BBA - ₹4LPA, BMC - ₹8LPA. For detailed information visit 'https://sxcpatna.edu.in/'"
+
+

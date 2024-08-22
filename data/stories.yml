@@ -1,0 +1,70 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+  
+- story: courses path
+  steps:
+  - intent: courses
+  - action: utter_courses
+
+- story: my_name_is path
+  steps:
+  - intent: my_name_is
+  - action: utter_my_name_is
+  
+- story: ask_apply_online path
+  steps:
+  - intent: ask_apply_online
+  - action: utter_ask_apply_online
+
+- story: ask_placements path
+  steps:
+  - intent: ask_placements
+  - action: utter_ask_placements
+
+- story: give name story path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: repeat_course_interested
+  - action: action_say_course_interested
+  - intent: ask_me_anything
+  - action: utter_ask_course_interested
+  - intent: give_course_interested
+    entities:
+    - course_interested: BCA
+  - slot_was_set:
+    - course_interested: BCA
+  - action: utter_remember
+  - intent: repeat_course_interested
+  - action: action_say_course_interested
+  - intent: goodbye
+  - action: utter_goodbye
+
